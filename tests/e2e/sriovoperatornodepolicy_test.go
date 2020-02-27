@@ -49,11 +49,11 @@ var _ = Describe("Operator", func() {
 				NodeSelector: map[string]string{
 					"feature.node.kubernetes.io/network-sriov.capable": "true",
 				},
-				Priority: 99,
-				Mtu:      9000,
-				NumVfs:   6,
+				Priority:    99,
+				Mtu:         9000,
+				NumVfs:      6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{},
-				DeviceType: "vfio-pci",
+				DeviceType:  "vfio-pci",
 			},
 		}
 		policy2 := &sriovnetworkv1.SriovNetworkNodePolicy{
@@ -70,9 +70,9 @@ var _ = Describe("Operator", func() {
 				NodeSelector: map[string]string{
 					"feature.node.kubernetes.io/network-sriov.capable": "true",
 				},
-				Priority: 99,
-				Mtu:      9000,
-				NumVfs:   6,
+				Priority:    99,
+				Mtu:         9000,
+				NumVfs:      6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{},
 			},
 		}
@@ -189,7 +189,7 @@ var _ = Describe("Operator", func() {
 				Mtu:      9000,
 				NumVfs:   6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{
-					PfNames:     []string{"#0-5"},
+					PfNames: []string{"#0-5"},
 				},
 				DeviceType: "vfio-pci",
 			},
@@ -212,7 +212,7 @@ var _ = Describe("Operator", func() {
 				Mtu:      9000,
 				NumVfs:   6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{
-					PfNames:     []string{"#0-0"},
+					PfNames: []string{"#0-0"},
 				},
 			},
 		}
@@ -332,7 +332,7 @@ var _ = Describe("Operator", func() {
 				},
 				NumVfs: 6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{
-					PfNames:     []string{"#0-1"},
+					PfNames: []string{"#0-1"},
 				},
 			},
 		}
@@ -352,7 +352,7 @@ var _ = Describe("Operator", func() {
 				},
 				NumVfs: 6,
 				NicSelector: sriovnetworkv1.SriovNetworkNicSelector{
-					PfNames:     []string{"#2-3"},
+					PfNames: []string{"#2-3"},
 				},
 			},
 		}

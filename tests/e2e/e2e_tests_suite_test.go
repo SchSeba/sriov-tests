@@ -30,8 +30,8 @@ import (
 	. "github.com/onsi/gomega"
 
 	. "github.com/openshift/sriov-tests/pkg/util"
-	"github.com/openshift/sriov-tests/pkg/util/cluster"
 	testclient "github.com/openshift/sriov-tests/pkg/util/client"
+	"github.com/openshift/sriov-tests/pkg/util/cluster"
 )
 
 var namespace = "openshift-sriov-network-operator"
