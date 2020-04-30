@@ -1,4 +1,4 @@
-package conformance
+package tests
 
 import (
 	"context"
@@ -25,7 +25,8 @@ import (
 var _ = Describe("pod", func() {
 	var sriovInfos *cluster.EnabledNodes
 	execute.BeforeAll(func() {
-		var err error
+		err := namespaces.Create(namespaces.Test, clients)
+		Expect(err).ToNot(HaveOccurred())
 		waitForSRIOVStable()
 		sriovInfos, err = cluster.DiscoverSriov(clients, operatorNamespace)
 		Expect(err).ToNot(HaveOccurred())
@@ -35,7 +36,7 @@ var _ = Describe("pod", func() {
 		waitForSRIOVStable()
 	})
 
-	var _ = Describe("Configuration", func() {
+	Describe("Configuration", func() {
 		var testNode string
 		resourceName := "testresource"
 		networkName := "testnetwork"
